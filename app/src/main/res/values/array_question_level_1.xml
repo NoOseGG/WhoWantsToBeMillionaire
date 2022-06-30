@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="question">
+        <item>Какое подпольное имя у Вити Дюсова</item> <!--1-->
+        <item>С кем встречается сахон</item> <!--2-->
+        <item>Что носит в черном портфеле зам. ком. роты</item> <!--3-->
+        <item>Какое подпольное имя у Вани Сахончика</item> <!--4-->
+        <item>Какое подпольное имя у Сергея Радашкевича</item> <!--5-->
+    </string-array>
+
+    <string-array name="answer_a">
+        <item>Дюймовочка</item> <!--1-->
+        <item>Марина</item> <!--2-->
+        <item>Карманная киска</item> <!--3-->
+        <item>Ванэс</item> <!--4-->
+        <item>Варенная курица</item> <!--5-->
+    </string-array>
+
+
+    <string-array name="answer_b">
+        <item>Дюшес</item> <!--1-->
+        <item>Кристина</item> <!--2-->
+        <item>Анальные бусы</item> <!--3-->
+        <item>Кононовича брат</item> <!--4-->
+        <item>Спортивный аналитик</item> <!--5-->
+    </string-array>
+
+
+    <string-array name="answer_c">
+        <item>Сахона брат</item> <!--1-->
+        <item>Сергей</item> <!--2-->
+        <item>Страпон</item> <!--3-->
+        <item>Милфхантер</item> <!--4-->
+        <item>Печкин</item> <!--5-->
+    </string-array>
+
+
+    <string-array name="answer_d">
+        <item>Дюс</item> <!--1-->
+        <item>Маша</item> <!--2-->
+        <item>Все перечисленное</item> <!--3-->
+        <item>Страпончик</item> <!--4-->
+        <item>Светофор</item> <!--5-->
+    </string-array>
+
+    <integer-array name="correct_answer">
+        <item>2</item> <!--1-->
+        <item>3</item> <!--2-->
+        <item>1</item> <!--3-->
+        <item>4</item> <!--4-->
+        <item>3</item> <!--5-->
+    </integer-array>
+</resources>

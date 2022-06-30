@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/drawable/button_answer.xml" value="0.123" />
+        <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/drawable/question_style.xml" value="0.1875" />
         <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/layout/activity_home.xml" value="0.22826086956521738" />
         <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/layout/fragment_game.xml" value="0.264" />
         <entry key="..\:/MyProject/WhoWantsToBeMillionaire/app/src/main/res/layout/fragment_menu.xml" value="0.22826086956521738" />
       </map>
     </option>
