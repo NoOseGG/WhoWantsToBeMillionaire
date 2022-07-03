@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="question_level_3">
+        <item>Самый очковый дежурный</item> <!--1-->
+        <item>Что сказал Клим когда въехал с Мяделецем в забор</item> <!--2-->
+    </string-array>
+
+    <string-array name="answer_a_level_3">
+        <item>Баразненок</item> <!--1-->
+        <item>Блядь</item> <!--2-->
+    </string-array>
+
+
+    <string-array name="answer_b_level_3">
+        <item>Волковец</item> <!--1-->
+        <item>Сука Коня</item> <!--2-->
+    </string-array>
+
+
+    <string-array name="answer_c_level_3">
+        <item>Зинкевич</item> <!--1-->
+        <item>Ебаный в рот</item> <!--2-->
+    </string-array>
+
+
+    <string-array name="answer_d_level_3">
+        <item>Кульбянок</item> <!--1-->
+        <item>Санчизес</item> <!--2-->
+    </string-array>
+
+    <integer-array name="correct_answer_level_3">
+        <item>1</item> <!--1-->
+        <item>3</item> <!--2-->
+    </integer-array>
+</resources>

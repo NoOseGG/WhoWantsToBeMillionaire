@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_button">#2196F3</color>
     <color name="text_color_button">#EEF7FF</color>
+    <color name="reward_style">#2196F3</color>
+    <color name="reward_style_done">#4CAF50</color>
 </resources>

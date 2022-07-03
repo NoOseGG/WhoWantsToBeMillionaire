@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/background_button"/>
+    <solid android:color="@color/reward_style"/>
     <corners
         android:radius="50dp"/>
 
@@ -9,4 +9,8 @@
         android:bottom="4dp"
         android:right="16dp"
         android:left="16dp"/>
+
+    <stroke
+        android:width="3dp"
+        android:color="@color/white"/>
 </shape>

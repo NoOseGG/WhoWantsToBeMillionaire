@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="question">
+    <string-array name="question_level_1">
         <item>Какое подпольное имя у Вити Дюсова</item> <!--1-->
-        <item>С кем встречается сахон</item> <!--2-->
+        <item>С кем встречается Cахон</item> <!--2-->
         <item>Что носит в черном портфеле зам. ком. роты</item> <!--3-->
         <item>Какое подпольное имя у Вани Сахончика</item> <!--4-->
         <item>Какое подпольное имя у Сергея Радашкевича</item> <!--5-->
     </string-array>
-
-    <string-array name="answer_a">
+4, "Какое подпольное имя у Сергея Радашкевича", "Варенная курица", "Спортивный аналитик", "Печкин", "Светофор", 3, 1
+    <string-array name="answer_a_level_1">
         <item>Дюймовочка</item> <!--1-->
         <item>Марина</item> <!--2-->
         <item>Карманная киска</item> <!--3-->
@@ -18,7 +18,7 @@
     </string-array>
 
 
-    <string-array name="answer_b">
+    <string-array name="answer_b_level_1">
         <item>Дюшес</item> <!--1-->
         <item>Кристина</item> <!--2-->
         <item>Анальные бусы</item> <!--3-->
@@ -27,7 +27,7 @@
     </string-array>
 
 
-    <string-array name="answer_c">
+    <string-array name="answer_c_level_1">
         <item>Сахона брат</item> <!--1-->
         <item>Сергей</item> <!--2-->
         <item>Страпон</item> <!--3-->
@@ -36,7 +36,7 @@
     </string-array>
 
 
-    <string-array name="answer_d">
+    <string-array name="answer_d_level_1">
         <item>Дюс</item> <!--1-->
         <item>Маша</item> <!--2-->
         <item>Все перечисленное</item> <!--3-->
@@ -44,7 +44,7 @@
         <item>Светофор</item> <!--5-->
     </string-array>
 
-    <integer-array name="correct_answer">
+    <integer-array name="correct_answer_level_1">
         <item>2</item> <!--1-->
         <item>3</item> <!--2-->
         <item>1</item> <!--3-->

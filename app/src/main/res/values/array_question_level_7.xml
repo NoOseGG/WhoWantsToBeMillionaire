@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="question_level_7">
+        <item>Где Круглик дал коршня Мосесу</item> <!--1-->
+    </string-array>
+
+    <string-array name="answer_a_level_7">
+        <item>ШПЗ</item> <!--1-->
+    </string-array>
+
+
+    <string-array name="answer_b_level_7">
+        <item>ТЭЦ</item> <!--1-->
+    </string-array>
+
+
+    <string-array name="answer_c_level_7">
+        <item>Боримак</item> <!--1-->
+    </string-array>
+
+
+    <string-array name="answer_d_level_7">
+        <item>Медпрепараты</item> <!--1-->
+    </string-array>
+
+    <integer-array name="correct_answer_level_7">
+        <item>4</item> <!--1-->
+    </integer-array>
+</resources>
