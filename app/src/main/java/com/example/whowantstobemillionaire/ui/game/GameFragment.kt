@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -84,43 +85,43 @@ class GameFragment : Fragment() {
     private fun checkReward(numberQuestion: Int) {
         when (numberQuestion) {
             2 -> {
-                binding.tvReward1.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward2.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward1.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward2.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             3 -> {
-                binding.tvReward2.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward3.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward2.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward3.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             4 -> {
-                binding.tvReward3.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward4.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward3.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward4.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             5 -> {
-                binding.tvReward4.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward5.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward4.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward5.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             6 -> {
-                binding.tvReward5.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward6.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward5.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward6.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             7 -> {
-                binding.tvReward6.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward7.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward6.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward7.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             8 -> {
-                binding.tvReward7.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward8.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward7.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward8.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             9 -> {
-                binding.tvReward8.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward9.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward8.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward9.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             10 -> {
-                binding.tvReward9.background = resources.getDrawable(R.drawable.reward_style_done)
-                binding.tvReward10.background = resources.getDrawable(R.drawable.reward_style_ready)
+                binding.tvReward9.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                binding.tvReward10.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             11 -> {
-                binding.tvReward10.background = resources.getDrawable(R.drawable.reward_style_done)
+                binding.tvReward10.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
                 showDialog("Вы победили")?.show()
             }
         }
