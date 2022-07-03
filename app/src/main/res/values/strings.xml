@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WhoWantsToBeMillionaire</string>
+
+
+    <string name="answer_a">A: %1$s</string>
+    <string name="answer_b">B: %1$s</string>
+    <string name="answer_c">C: %1$s</string>
+    <string name="answer_d">D: %1$s</string>
 </resources>

@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import com.example.whowantstobemillionaire.model.QuestionEntity
 
 
-@Database(entities = [QuestionEntity::class], version = 1)
+@Database(entities = [QuestionEntity::class], version = 1, exportSchema = false)
 abstract class AppDataBase : RoomDatabase() {
 
     abstract fun questionDao(): QuestionDao

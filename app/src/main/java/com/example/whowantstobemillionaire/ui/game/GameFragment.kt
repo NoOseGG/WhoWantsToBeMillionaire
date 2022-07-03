@@ -36,17 +36,17 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var correct_answer = 5
+        var correct_answer = 0
 
         viewModel.questionFlow.onEach {
             with(binding) {
                 checkReward(it.numberQuestion)
 
                 tvQuestion.text = it.question
-                buttonA.text = "A: ${it.answerA}"
-                buttonB.text = "B: ${it.answerB}"
-                buttonC.text = "C: ${it.answerC}"
-                buttonD.text = "D: ${it.answerD}"
+                buttonA.text = getString(R.string.answer_a, it.answerA)
+                buttonB.text = getString(R.string.answer_b, it.answerB)
+                buttonC.text = getString(R.string.answer_c, it.answerC)
+                buttonD.text = getString(R.string.answer_d, it.answerD)
                 correct_answer = it.correctAnswer
             }
         }.launchIn(viewLifecycleOwner.lifecycleScope)
@@ -118,6 +118,9 @@ class GameFragment : Fragment() {
             10 -> {
                 binding.tvReward9.background = resources.getDrawable(R.drawable.reward_style_done)
                 binding.tvReward10.background = resources.getDrawable(R.drawable.reward_style_ready)
+            }
+            11 -> {
+                binding.tvReward10.background = resources.getDrawable(R.drawable.reward_style_done)
                 showDialog("Вы победили")?.show()
             }
         }

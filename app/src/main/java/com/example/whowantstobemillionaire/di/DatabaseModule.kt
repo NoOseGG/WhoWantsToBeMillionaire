@@ -1,7 +1,9 @@
 package com.example.whowantstobemillionaire.di
 
 import android.content.Context
+import androidx.room.AutoMigration
 import androidx.room.Room
+import androidx.room.migration.AutoMigrationSpec
 import com.example.whowantstobemillionaire.room.AppDataBase
 import com.example.whowantstobemillionaire.room.QuestionDao
 import dagger.Module
@@ -20,9 +22,9 @@ class DatabaseModule {
         return Room.databaseBuilder(
             context,
             AppDataBase::class.java,
-            "question.db"
+            "questions.db"
         )
-            .createFromAsset("question.db")
+            .createFromAsset("database/question.db")
             .build()
     }
 

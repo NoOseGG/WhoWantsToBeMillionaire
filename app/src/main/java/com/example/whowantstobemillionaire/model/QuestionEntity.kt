@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "question")
 data class QuestionEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    @ColumnInfo(name = "id")
+    val id: Int = 0,
     @ColumnInfo(name = "question")
     val question: String,
     @ColumnInfo(name = "answerA")
@@ -20,6 +21,6 @@ data class QuestionEntity(
     val answerD: String,
     @ColumnInfo(name = "correctAnswer")
     val correctAnswer: Int,
-    @ColumnInfo(name = "numberQuestion")
-    val numberQuestion: Int
+    @ColumnInfo(name = "level")
+    val level: Int
 )

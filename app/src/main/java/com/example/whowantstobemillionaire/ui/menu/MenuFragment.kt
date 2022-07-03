@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.whowantstobemillionaire.R
 import com.example.whowantstobemillionaire.databinding.FragmentMenuBinding
+import com.example.whowantstobemillionaire.room.AppDataBase
+import com.example.whowantstobemillionaire.room.QuestionDao
+import javax.inject.Inject
 
 class MenuFragment : Fragment() {
 
