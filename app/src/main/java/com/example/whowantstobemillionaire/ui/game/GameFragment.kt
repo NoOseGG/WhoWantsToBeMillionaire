@@ -2,9 +2,7 @@ package com.example.whowantstobemillionaire.ui.game
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -13,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.whowantstobemillionaire.R
 import com.example.whowantstobemillionaire.databinding.FragmentGameBinding
+import com.example.whowantstobemillionaire.model.Question
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -23,6 +22,11 @@ class GameFragment : Fragment() {
     private var _binding: FragmentGameBinding? = null
     private val binding get() = requireNotNull(_binding)
     private val viewModel: GameViewModel by viewModels()
+
+    private val rewards by lazy {
+        listOf(binding.tvReward1, binding.tvReward2, binding.tvReward3, binding.tvReward4, binding.tvReward5,
+            binding.tvReward6, binding.tvReward7, binding.tvReward8, binding.tvReward9, binding.tvReward10)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -67,6 +71,24 @@ class GameFragment : Fragment() {
         binding.buttonD.setOnClickListener {
             checkAnswer(4, correct_answer)
         }
+
+        //button hint click
+        binding.btnHintCall.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setMessage("Кому Вы хотете позвонить?")
+                .setPositiveButton("Денису Кононовичу") {dialog, id ->
+                    viewModel.sendWhoCalled(id)
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
+        }
+
+        viewModel.hintFlow.onEach {
+            Toast.makeText(requireContext(), "$it $correct_answer", Toast.LENGTH_LONG).show()
+            binding.btnHintCall.isEnabled = false
+            binding.btnHintCall.background = ResourcesCompat.getDrawable(resources, R.drawable.button_hint_disable_style, null)
+        }.launchIn(viewLifecycleOwner.lifecycleScope)
     }
 
     override fun onDestroyView() {
@@ -84,44 +106,12 @@ class GameFragment : Fragment() {
 
     private fun checkReward(numberQuestion: Int) {
         when (numberQuestion) {
-            2 -> {
-                binding.tvReward1.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward2.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            3 -> {
-                binding.tvReward2.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward3.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            4 -> {
-                binding.tvReward3.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward4.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            5 -> {
-                binding.tvReward4.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward5.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            6 -> {
-                binding.tvReward5.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward6.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            7 -> {
-                binding.tvReward6.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward7.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            8 -> {
-                binding.tvReward7.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward8.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            9 -> {
-                binding.tvReward8.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward9.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
-            }
-            10 -> {
-                binding.tvReward9.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
-                binding.tvReward10.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
+            in 2..10 -> {
+                rewards[numberQuestion - 2].background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                rewards[numberQuestion - 1].background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_ready, null)
             }
             11 -> {
-                binding.tvReward10.background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
+                rewards[numberQuestion - 2].background = ResourcesCompat.getDrawable(resources, R.drawable.reward_style_done, null)
                 showDialog("Вы победили")?.show()
             }
         }
@@ -129,9 +119,10 @@ class GameFragment : Fragment() {
 
     private fun showDialog(msg: String): AlertDialog? {
         return AlertDialog.Builder(requireContext())
+            .setCancelable(false)
             .setMessage(msg)
             .setPositiveButton("Выйти") { dialog, _ ->
-                dialog.cancel()
+                dialog.dismiss()
                 findNavController().navigate(R.id.action_gameFragment_to_menuFragment)
             }
             .create()

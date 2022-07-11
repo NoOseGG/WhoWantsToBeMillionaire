@@ -11,4 +11,6 @@
     <color name="text_color_button">#EEF7FF</color>
     <color name="reward_style">#2196F3</color>
     <color name="reward_style_done">#4CAF50</color>
+    <color name="button_hint_enable_style">#CDDC39</color>
+    <color name="button_hint_disable_style">#E3483C</color>
 </resources>

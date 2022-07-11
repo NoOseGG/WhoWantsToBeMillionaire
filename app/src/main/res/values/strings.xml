@@ -6,4 +6,8 @@
     <string name="answer_b">B: %1$s</string>
     <string name="answer_c">C: %1$s</string>
     <string name="answer_d">D: %1$s</string>
+
+    <string name="info_dialog_title">Информация</string>
+    <string name="info_dialog_message">Ответьте на 10 вопросов, и откройте случайную фотографию.</string>
+    <string name="info_dialog_button">Закрыть</string>
 </resources>

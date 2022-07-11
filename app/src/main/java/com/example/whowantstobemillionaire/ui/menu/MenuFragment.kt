@@ -1,9 +1,10 @@
 package com.example.whowantstobemillionaire.ui.menu
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Toast
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.whowantstobemillionaire.R
@@ -37,6 +38,11 @@ class MenuFragment : Fragment() {
         binding.btnExit.setOnClickListener {
             System.exit(0)
         }
+
+    }
+
+    override fun onStop() {
+        super.onStop()
     }
 
     override fun onDestroyView() {
